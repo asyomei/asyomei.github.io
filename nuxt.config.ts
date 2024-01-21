@@ -12,4 +12,7 @@ export default defineNuxtConfig({
     strict: true,
     shim: false,
   },
+  nitro: {
+    preset: "github-pages",
+  },
 })
