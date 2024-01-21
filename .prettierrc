@@ -1,0 +1,8 @@
+{
+  "semi": false,
+  "singleAttributePerLine": true,
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "importOrder": ["^@/", "^[./]"],
+  "importOrderSortSpecifiers": true,
+  "importOrderParserPlugins": ["typescript", "vue"]
+}
