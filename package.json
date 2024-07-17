@@ -1,0 +1,26 @@
+{
+  "name": "@asyomei/personal-website",
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.8.1",
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource/open-sans": "^5.0.28",
+    "astro": "^4.11.5",
+    "just-unique": "^4.2.0",
+    "sharp": "^0.33.4",
+    "tailwindcss": "^3.4.6",
+    "typescript": "^5.5.3"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "prettier": "^3.3.3"
+  }
+}

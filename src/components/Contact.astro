@@ -1,0 +1,16 @@
+---
+import Bubble from "./Bubble.astro";
+
+interface Props {
+  desc: string;
+  url?: string;
+}
+
+const { desc, url } = Astro.props;
+---
+
+<li class="ml-1 flex gap-3">
+  <span class="select-none">•</span>
+  <a href={url}><slot /></a>
+  <Bubble>{desc}</Bubble>
+</li>

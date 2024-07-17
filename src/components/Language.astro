@@ -1,0 +1,15 @@
+---
+import Bubble from "./Bubble.astro";
+
+interface Props {
+  desc: string;
+}
+
+const { desc } = Astro.props;
+---
+
+<li class="ml-1 flex gap-3">
+  <span class="select-none">•</span>
+  <p><slot /></p>
+  <Bubble>{desc}</Bubble>
+</li>

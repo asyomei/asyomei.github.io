@@ -1,0 +1,65 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Info from "../components/Info.astro";
+import Language from "../components/Language.astro";
+import Contact from "../components/Contact.astro";
+import Header from "../components/Header.astro";
+
+const currentDate = new Date();
+const day = currentDate.getUTCDate();
+const mon = currentDate.getUTCMonth() + 1;
+const year = currentDate.getUTCFullYear();
+let yearsOld = year - 2006;
+if (mon < 2 || (mon === 2 && day < 9)) {
+  yearsOld--;
+}
+---
+
+<BaseLayout>
+  <Header>About me</Header>
+  <Info desc="My name">Vadim</Info>
+  <Info desc="Birthday">February 09 (aquarius), {yearsOld} y.o.</Info>
+  <Info desc="Favorite color"> white [#ffffff]</Info>
+  <Info desc="Favorite flower">sunflower</Info>
+  <Info desc="Favorite music">metal, anison</Info>
+  <Info desc="Favorite dubber">subtitles</Info>
+  <br />
+
+  <Header>Languages</Header>
+  <ul>
+    <Language desc="native">Russian</Language>
+    <Language desc="maybe common">English</Language>
+    <Language desc="very beginning">Japanese</Language>
+    <Language desc="cool">C#</Language>
+    <Language desc="native">TypeScript / JS (NodeJS)</Language>
+  </ul>
+  <p>...and many others</p>
+  <br />
+
+  <Header>Achivements</Header>
+  <p>oops, nothing so far. Stay tuned, maybe one day ;)</p>
+  <br />
+
+  <Header>
+    <a href="/projects">My projects</a>
+  </Header>
+  <p>Please click the link above</p>
+  <br />
+
+  <Header>Contacts</Header>
+  <ul>
+    <Contact url="https://t.me/asyomei" desc="often">Telegram</Contact>
+    <Contact url="https://vk.com/asyomei" desc="maybe often">VK</Contact>
+    <Contact url="mailto:vabgalimov@vivaldi.net" desc="hardly ever">E-mail</Contact>
+    <Contact url="https://en.wikipedia.org/wiki/Pigeon_post" desc="what">Post pigeons</Contact>
+  </ul>
+  <br />
+
+  <Header>Other links</Header>
+  <ul>
+    <Contact url="https://shikimori.one/asyomei" desc="anime list">Shikimori</Contact>
+    <Contact url="https://vndb.org/u266442" desc="vn list">VNDB</Contact>
+    <Contact url="https://4pda.to/forum/index.php?showuser=8079654" desc="forum">4PDA</Contact>
+  </ul>
+  <p>...and many others</p>
+</BaseLayout>

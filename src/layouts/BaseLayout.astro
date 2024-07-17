@@ -1,0 +1,39 @@
+---
+import "@fontsource/open-sans";
+import Copyrights from "../components/Copyrights.astro";
+import Avatar from "../components/Avatar.astro";
+
+interface Props {
+  title?: string;
+}
+
+const title = [Astro.props.title, "Asyomei Website"].filter(Boolean).join(" | ");
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main class="mx-8 mt-4">
+      <Avatar />
+      <hr class="my-4" />
+      <slot />
+      <hr class="my-4" />
+    </main>
+    <Copyrights />
+  </body>
+</html>
+
+<style is:global>
+  body {
+    @apply dark:bg-[#1e1e1e] dark:text-white;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  a {
+    @apply underline underline-offset-2;
+  }
+</style>
