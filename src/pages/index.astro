@@ -11,26 +11,25 @@ const mon = currentDate.getUTCMonth() + 1;
 const year = currentDate.getUTCFullYear();
 let yearsOld = year - 2006;
 if (mon < 2 || (mon === 2 && day < 9)) {
-  yearsOld--;
+  --yearsOld;
 }
 ---
 
 <BaseLayout>
   <Header>About me</Header>
-  <Info desc="My name">Vadim</Info>
+  <Info desc="My name">Vadim Abgalimov</Info>
   <Info desc="Birthday">February 09 (aquarius), {yearsOld} y.o.</Info>
   <Info desc="Favorite color"> white [#ffffff]</Info>
   <Info desc="Favorite flower">sunflower</Info>
-  <Info desc="Favorite music">metal, anison</Info>
-  <Info desc="Favorite dubber">subtitles</Info>
+  <Info desc="Favorite music">edm, metal</Info>
   <br />
 
   <Header>Languages</Header>
   <ul>
     <Language desc="native">Russian</Language>
     <Language desc="maybe common">English</Language>
-    <Language desc="very beginning">Japanese</Language>
     <Language desc="cool">C#</Language>
+    <Language desc="learning">C++</Language>
     <Language desc="native">TypeScript / JS (NodeJS)</Language>
   </ul>
   <p>...and many others</p>
@@ -48,18 +47,13 @@ if (mon < 2 || (mon === 2 && day < 9)) {
 
   <Header>Contacts</Header>
   <ul>
-    <Contact url="https://t.me/asyomei" desc="often">Telegram</Contact>
+    <Contact url="https://t.me/asyomei" desc="always">Telegram</Contact>
     <Contact url="https://vk.com/asyomei" desc="maybe often">VK</Contact>
+    <Contact url="https://4pda.to/forum/index.php?showuser=8079654" desc="maybe often">
+      4PDA
+    </Contact>
     <Contact url="mailto:vabgalimov@vivaldi.net" desc="hardly ever">E-mail</Contact>
     <Contact url="https://en.wikipedia.org/wiki/Pigeon_post" desc="what">Post pigeons</Contact>
-  </ul>
-  <br />
-
-  <Header>Other links</Header>
-  <ul>
-    <Contact url="https://shikimori.one/asyomei" desc="anime list">Shikimori</Contact>
-    <Contact url="https://vndb.org/u266442" desc="vn list">VNDB</Contact>
-    <Contact url="https://4pda.to/forum/index.php?showuser=8079654" desc="forum">4PDA</Contact>
   </ul>
   <p>...and many others</p>
 </BaseLayout>
