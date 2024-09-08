@@ -1,0 +1,137 @@
+---
+import { Image } from "astro:assets";
+import jsImage from "../assets/js.png";
+import pannyaImage from "../assets/pannya.png";
+import ruImage from "../assets/ru.png";
+import sunflowerImage from "../assets/sunflower.png";
+import Section from "../components/Section.astro";
+import TextTable from "../components/TextTable.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const CHB_SHIKI = "https://shikimori.one/animes/59-chobits";
+const CHB_ANILIST = "https://anilist.co/anime/59/chobits";
+---
+
+<BaseLayout>
+  <Image src={pannyaImage} alt="pannya" class="pannya" title="Uryuu~" />
+  <Section>hi there!</Section>
+  <Section>
+    <div>
+      i am <b>vadim</b> aka <b>
+        <a class="nick" href="https://mynickname.com/id1805155">asyomei</a>
+      </b> aka <b>
+        <a class="nick" href="https://mynickname.com/vabgalimov">vabgalimov</a>
+      </b> 🌻
+    </div>
+    <div>full-time student, part-time js/ts developer (not really)</div>
+    <div>
+      more about me as a dev on my
+      <a href="https://github.com/asyomei">github page</a>
+    </div>
+  </Section>
+  <Section title="extremely interesting info (no):">
+    <TextTable>
+      <div>birthday</div>
+      <div>feb 9 (aquarius ♒)</div>
+
+      <div>langs</div>
+      <div>
+        <img alt="ru" src={ruImage.src} class="icon" /> native,
+        <img alt="js" src={jsImage.src} class="icon" /> native
+      </div>
+
+      <div>fav color</div>
+      <div>#ffffff <span class="fav-color"></span></div>
+
+      <div>fav flower</div>
+      <div>
+        sunflower <img alt="🌻" src={sunflowerImage.src} class="icon" />
+      </div>
+
+      <div>fav anime</div>
+      <div>
+        chobits
+        {" "}
+        (<a href={CHB_SHIKI}>shiki</a>/<a href={CHB_ANILIST}>anilist</a>)
+      </div>
+
+      <div>fav music</div>
+      <div>rock & metal</div>
+    </TextTable>
+  </Section>
+  <Section title="contacts (in order of preference):">
+    <TextTable>
+      <div>telegram</div>
+      <div><a href="https://t.me/asyomei">asyomei</a></div>
+
+      <div>vk</div>
+      <div><a href="https://vk.com/asyomei">asyomei</a></div>
+
+      <div>4pda</div>
+      <div>
+        <a href="https://4pda.to/forum/index.php?showuser=8079654">
+          vabgalimov
+        </a>
+      </div>
+
+      <div>email</div>
+      <div>
+        <a href="mailto:vabgalimov@vivaldi.net" class="email">
+          vabgalimov @ vivaldi.net
+        </a>
+      </div>
+    </TextTable>
+  </Section>
+  <Section title="other links:">
+    <TextTable>
+      <div>shikimori</div>
+      <div><a href="https://shikimori.one/asyomei">asyomei</a></div>
+
+      <div>vndb</div>
+      <div><a href="https://vndb.org/u266442">asyomei</a></div>
+    </TextTable>
+  </Section>
+</BaseLayout>
+
+<style>
+  .pannya {
+    position: absolute;
+    left: 70vw;
+    top: 6vh;
+
+    @media (max-width: 720px) {
+      top: 2vh;
+    }
+
+    @media (max-width: 480px) {
+      width: 90px;
+      height: 62px;
+    }
+  }
+
+  .fav-color {
+    display: inline-block;
+    border: 1px solid #bbb;
+    background: #ffffff;
+    height: 10px;
+    width: 10px;
+    vertical-align: middle;
+    margin-bottom: 2px;
+  }
+
+  .icon {
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+    margin-bottom: 2px;
+  }
+
+  .nick {
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+
+  .email {
+    color: var(--text-primary);
+  }
+</style>

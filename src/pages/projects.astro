@@ -1,0 +1,23 @@
+---
+import Section from "../components/Section.astro";
+import TextTable from "../components/TextTable.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <Section>hello there</Section>
+  <Section>
+    there's nothing serious, but may be there will be something cool in future
+  </Section>
+  <Section title="projects:">
+    <TextTable>
+      <div>
+        <a href="https://github.com/asyomei/himawari-bot">himawari bot</a>
+      </div>
+      <div>
+        <a href="https://t.me/himawaridesu_bot">telegram bot</a>, sends anime &
+        manga information using shikimori api
+      </div>
+    </TextTable>
+  </Section>
+</BaseLayout>
