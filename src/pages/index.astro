@@ -1,19 +1,12 @@
 ---
-import { Image } from "astro:assets";
 import jsImage from "../assets/js.png";
-import pannyaImage from "../assets/pannya.png";
 import ruImage from "../assets/ru.png";
-import sunflowerImage from "../assets/sunflower.png";
 import Section from "../components/Section.astro";
 import TextTable from "../components/TextTable.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-
-const CHB_SHIKI = "https://shikimori.one/animes/59-chobits";
-const CHB_ANILIST = "https://anilist.co/anime/59/chobits";
 ---
 
 <BaseLayout>
-  <Image src={pannyaImage} alt="pannya" class="pannya" title="Uryuu~" />
   <Section>hi there!</Section>
   <Section>
     <div>
@@ -23,7 +16,7 @@ const CHB_ANILIST = "https://anilist.co/anime/59/chobits";
         <a class="nick" href="https://mynickname.com/vabgalimov">vabgalimov</a>
       </b>
     </div>
-    <div>full-time student, part-time js/ts developer (not really)</div>
+    <div>full-time student, part-time dev</div>
     <div>
       more about me as a dev on my
       <a href="https://github.com/asyomei">github page</a>
@@ -37,26 +30,11 @@ const CHB_ANILIST = "https://anilist.co/anime/59/chobits";
       <div>langs</div>
       <div>
         <img alt="ru" src={ruImage.src} class="icon" /> native,
-        <img alt="js" src={jsImage.src} class="icon" /> native
+        <img alt="js" src={jsImage.src} class="icon" />
       </div>
 
       <div>fav color</div>
-      <div>white <span class="fav-color"></span></div>
-
-      <div>fav flower</div>
-      <div>
-        sunflower <img alt="🌻" src={sunflowerImage.src} class="icon" />
-      </div>
-
-      <div>fav anime</div>
-      <div>
-        chobits
-        {" "}
-        (<a href={CHB_SHIKI}>shiki</a>/<a href={CHB_ANILIST}>anilist</a>)
-      </div>
-
-      <div>fav music</div>
-      <div>rock & metal</div>
+      <div>snow [#fffafa] <span class="fav-color"></span></div>
     </TextTable>
   </Section>
   <Section title="contacts (in order of preference):">
@@ -90,25 +68,10 @@ const CHB_ANILIST = "https://anilist.co/anime/59/chobits";
 </BaseLayout>
 
 <style>
-  .pannya {
-    position: absolute;
-    left: 70vw;
-    top: 6vh;
-
-    @media (max-width: 720px) {
-      top: 2vh;
-    }
-
-    @media (max-width: 480px) {
-      width: 90px;
-      height: 62px;
-    }
-  }
-
   .fav-color {
     display: inline-block;
     border: 1px solid #bbb;
-    background: #ffffff;
+    background: snow;
     height: 10px;
     width: 10px;
     vertical-align: middle;
