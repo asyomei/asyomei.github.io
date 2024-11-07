@@ -12,17 +12,17 @@ import Header from "../components/Header.astro";
     <title>asyomei</title>
   </head>
   <body>
-    <div class="app">
+    <main class="app">
       <Header />
       <slot />
-    </div>
+    </main>
     <Footer />
   </body>
 </html>
 
 <style is:global>
   :root {
-    --bg: #fffffa;
+    --bg: snow;
     --text-accent: #5e72be;
     --text-primary: #000000;
     --text-secondary: #a58fa4;
@@ -30,10 +30,10 @@ import Header from "../components/Header.astro";
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #1c1a1f;
-      --text-accent: #9d93ca;
-      --text-primary: #d4c7df;
-      --text-secondary: #7c6d80;
+      --bg: #1f1c1a;
+      --text-accent: #c0af63;
+      --text-primary: #dfd9c7;
+      --text-secondary: #80786d;
     }
   }
 
